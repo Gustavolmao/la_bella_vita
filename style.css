@@ -1,0 +1,244 @@
+/* -------------------- FONTES E BASE -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+:root {
+  --cor-fundo: #faf9f6;       /* branco perolado */
+  --cor-principal: #a41d1d;   /* vermelho vinho */
+  --cor-hover: #8c1616;       /* vermelho mais escuro */
+  --texto-escuro: #222;
+  --texto-claro: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  background-color: var(--cor-fundo);
+  color: var(--texto-escuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* -------------------- CABEÇALHO -------------------- */
+header {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--cor-principal);
+  margin-bottom: 10px;
+}
+
+p {
+  color: var(--texto-claro);
+  margin-bottom: 30px;
+}
+
+/* -------------------- BOTÕES -------------------- */
+.btn {
+  display: inline-block;
+  background-color: var(--cor-principal);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--cor-hover);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* -------------------- SEÇÕES DE CONTEÚDO -------------------- */
+section {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  border: 2px solid var(--cor-principal);
+  border-radius: 20px;
+  padding: 25px 30px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* -------------------- ITENS DE CARDÁPIO -------------------- */
+.category {
+  margin-top: 40px;
+  border-top: 2px solid var(--cor-principal);
+  padding-top: 20px;
+}
+
+.category h2 {
+  color: var(--cor-principal);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px dashed #ccc;
+  padding: 10px 0;
+}
+
+.item span {
+  font-size: 1rem;
+  color: var(--texto-claro);
+}
+
+/* -------------------- FORMULÁRIO -------------------- */
+form {
+  background: white;
+  border: 2px solid var(--cor-principal);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 500px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #fdfdfd;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* -------------------- LINKS -------------------- */
+.back-link {
+  margin-top: 25px;
+  text-decoration: none;
+  color: var(--cor-principal);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* -------------------- RODAPÉ -------------------- */
+footer {
+  margin: 40px 0 20px 0;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+}
+
+/* -------------------- ANIMAÇÕES -------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HEADER PADRÃO */
+header {
+  background-color: #fff5e1;
+  color: #701010;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 40px;
+}
+
+header .logo-topo {
+  font-family: "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #701010;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+header .menu-topo {
+  margin-top: 10px;
+}
+
+header .menu-topo a {
+  text-decoration: none;
+  color: #701010;
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+header .menu-topo a:hover {
+  color: #a52a2a;
+  text-decoration: underline;
+}
+
+header .menu-topo a.ativo {
+  border-bottom: 2px solid #701010;
+}
+
+.fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.55);
+  z-index: -1;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  min-height: 100vh;
+  text-align: center;
+  color: var(--texto-escuro);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centraliza verticalmente */
+  min-height: 80vh; /* controla a altura do bloco */
+}
